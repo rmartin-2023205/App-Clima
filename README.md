@@ -1,5 +1,9 @@
 # App-Clima
 
+## 🌐 Demo en línea
+
+El proyecto está desplegado y disponible en: [https://app-clima-livid.vercel.app](https://app-clima-livid.vercel.app)
+
 **App-Clima** es una página web para consultar el clima actual y el pronóstico de 7 días de cualquier ciudad. Utiliza la API gratuita de **Open-Meteo** (sin necesidad de API key) e incluye funciones de favoritos y una interfaz moderna con efectos *glassmorphism*.
 
 ## 🚀 Funcionalidades
