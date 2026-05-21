@@ -1,22 +1,24 @@
 /* =============================================
    ESTILOS PERSONALIZADOS PARA CLIMAAPP
-   Complementa TailwindCSS Play CDN con animaciones,
-   glassmorphism y efectos que Tailwind no cubre.
+   Paleta: #8ecae6 · #219ebc · #023047 · #ffb703 · #fb8500
    ============================================= */
+
+/* ---- Google Font Import ---- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ---- Scrollbar personalizado ---- */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #012030;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #219ebc;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #8ecae6;
 }
 
 /* Scroll suave en toda la página */
@@ -26,15 +28,15 @@ html {
 
 /* ---- Navbar con efecto glassmorphism ---- */
 .navbar-glass {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(2, 48, 71, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(142, 202, 230, 0.1);
 }
 
 .navbar-scrolled {
-  background: rgba(10, 14, 26, 0.95);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(2, 48, 71, 0.97);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(33, 158, 188, 0.05);
 }
 
 /* Links de navegación con indicador inferior animado */
@@ -43,7 +45,7 @@ html {
   padding: 0.5rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: #8ecae6;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -51,12 +53,12 @@ html {
 
 .nav-link:hover {
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(142, 202, 230, 0.08);
 }
 
 /* Indicador de sección activa */
 .nav-link.active {
-  color: #22d3ee;
+  color: #ffb703;
 }
 
 .nav-link.active::after {
@@ -67,7 +69,7 @@ html {
   transform: translateX(-50%);
   width: 20px;
   height: 2px;
-  background: linear-gradient(90deg, #22d3ee, #3b82f6);
+  background: linear-gradient(90deg, #ffb703, #fb8500);
   border-radius: 1px;
 }
 
@@ -77,26 +79,26 @@ html {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: #8ecae6;
   border-radius: 0.75rem;
   transition: all 0.3s ease;
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  color: #22d3ee;
-  background: rgba(34, 211, 238, 0.05);
+  color: #ffb703;
+  background: rgba(255, 183, 3, 0.08);
 }
 
 /* ---- Fondo hero con gradiente animado ---- */
 .hero-bg {
   background: linear-gradient(
     135deg,
-    #0f172a 0%,
-    #1e1b4b 25%,
-    #172554 50%,
-    #0c4a6e 75%,
-    #134e4a 100%
+    #023047 0%,
+    #01263a 20%,
+    #034a6e 40%,
+    #219ebc 70%,
+    #8ecae6 100%
   );
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
@@ -115,14 +117,14 @@ html {
   content: '';
   position: absolute;
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.12;
   animation: float 20s ease-in-out infinite;
 }
 
 .particles::before {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, #22d3ee, transparent);
+  background: radial-gradient(circle, #ffb703, transparent);
   top: 10%;
   right: -10%;
 }
@@ -130,7 +132,7 @@ html {
 .particles::after {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, #a78bfa, transparent);
+  background: radial-gradient(circle, #8ecae6, transparent);
   bottom: 10%;
   left: -5%;
   animation-delay: -7s;
@@ -144,36 +146,38 @@ html {
 
 /* ---- Tarjetas con glassmorphism ---- */
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(142, 202, 230, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(142, 202, 230, 0.1);
   transition: all 0.4s ease;
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(142, 202, 230, 0.08);
+  border-color: rgba(33, 158, 188, 0.25);
+  box-shadow: 0 8px 32px rgba(33, 158, 188, 0.08);
 }
 
 /* Tarjeta de detalle (sensación térmica, humedad, etc.) */
 .detail-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(33, 158, 188, 0.06);
+  border: 1px solid rgba(142, 202, 230, 0.08);
   transition: all 0.3s ease;
 }
 
 .detail-card:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(33, 158, 188, 0.12);
   transform: translateY(-2px);
+  border-color: rgba(255, 183, 3, 0.2);
 }
 
 /* ---- Tarjetas de pronóstico diario ---- */
 .forecast-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(142, 202, 230, 0.05);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(142, 202, 230, 0.08);
   border-radius: 1.25rem;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -181,17 +185,17 @@ html {
 }
 
 .forecast-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(34, 211, 238, 0.2);
+  background: rgba(33, 158, 188, 0.12);
+  border-color: rgba(255, 183, 3, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(34, 211, 238, 0.08);
+  box-shadow: 0 8px 30px rgba(255, 183, 3, 0.1);
 }
 
 /* ---- Tarjetas de favoritos ---- */
 .favorite-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(142, 202, 230, 0.04);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(142, 202, 230, 0.08);
   border-radius: 1.25rem;
   padding: 1.25rem;
   display: flex;
@@ -202,8 +206,8 @@ html {
 }
 
 .favorite-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(167, 139, 250, 0.3);
+  background: rgba(33, 158, 188, 0.1);
+  border-color: rgba(255, 183, 3, 0.3);
   transform: translateY(-2px);
 }
 
@@ -223,7 +227,7 @@ html {
 
 .hover-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px rgba(2, 48, 71, 0.4), 0 0 20px rgba(33, 158, 188, 0.08);
 }
 
 /* ---- Product card glow effect ---- */
@@ -238,7 +242,7 @@ html {
   border-radius: inherit;
   opacity: 0;
   transition: opacity 0.4s ease;
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(33, 158, 188, 0.06), rgba(255, 183, 3, 0.06));
 }
 
 .product-card:hover::before {
@@ -249,8 +253,8 @@ html {
 .spinner {
   width: 48px;
   height: 48px;
-  border: 3px solid rgba(34, 211, 238, 0.1);
-  border-top-color: #22d3ee;
+  border: 3px solid rgba(33, 158, 188, 0.15);
+  border-top-color: #ffb703;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -310,9 +314,53 @@ html {
   }
 }
 
+/* ---- Shimmer / Pulse glow para temperature ---- */
+@keyframes pulseGlow {
+  0%, 100% { text-shadow: 0 0 20px rgba(255, 183, 3, 0.3); }
+  50% { text-shadow: 0 0 40px rgba(251, 133, 0, 0.5); }
+}
+
+.temp-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
 /* ---- Texto de error en formulario ---- */
 .error-text.show {
   display: block;
+}
+
+/* ---- Marquee / ticker strip ---- */
+.marquee-strip {
+  background: linear-gradient(90deg, #ffb703, #fb8500);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-strip .marquee-content {
+  display: inline-block;
+  animation: marqueeScroll 20s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ---- Section divider glow ---- */
+.section-glow {
+  position: relative;
+}
+
+.section-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #219ebc, #ffb703, transparent);
+  border-radius: 1px;
 }
 
 /* ---- Responsivo: ajustes menores ---- */
@@ -324,12 +372,33 @@ html {
 
 /* ---- Selection color ---- */
 ::selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(255, 183, 3, 0.3);
   color: #ffffff;
 }
 
 /* ---- Focus visible for accessibility ---- */
 :focus-visible {
-  outline: 2px solid #22d3ee;
+  outline: 2px solid #ffb703;
   outline-offset: 2px;
+}
+
+/* ---- Custom utility: gradient text ---- */
+.text-gradient-warm {
+  background: linear-gradient(135deg, #ffb703, #fb8500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cool {
+  background: linear-gradient(135deg, #8ecae6, #219ebc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Background pattern overlay ---- */
+.bg-pattern {
+  background-image: radial-gradient(rgba(142, 202, 230, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
 }

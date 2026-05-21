@@ -150,12 +150,12 @@ function mostrarPronostico(weather) {
     card.classList.add('animate-slide-up');
 
     card.innerHTML = `
-      <p class="text-sm font-semibold ${esHoy ? 'text-cyan-400' : 'text-slate-300'} mb-3">
+      <p class="text-sm font-semibold ${esHoy ? 'text-sun' : 'text-sky-light/80'} mb-3">
         ${esHoy ? 'Hoy' : dias[fecha.getDay()]}
       </p>
       <span class="text-4xl block mb-3">${info.icon}</span>
-      <p class="text-lg font-bold">${Math.round(daily.temperature_2m_max[i])}°</p>
-      <p class="text-sm text-slate-500">${Math.round(daily.temperature_2m_min[i])}°</p>
+      <p class="text-lg font-bold text-sun">${Math.round(daily.temperature_2m_max[i])}°</p>
+      <p class="text-sm text-sky-light/40">${Math.round(daily.temperature_2m_min[i])}°</p>
     `;
 
     forecastContainer.appendChild(card);
@@ -209,9 +209,9 @@ function actualizarBotonFavorito(nombre) {
 
   favIcon.textContent = esFavorito ? '★' : '☆';
   favText.textContent = esFavorito ? 'Guardada' : 'Guardar';
-  favBtn.classList.toggle('border-cyan-400', esFavorito);
-  favBtn.classList.toggle('bg-cyan-400/10', esFavorito);
-  favBtn.classList.toggle('text-cyan-400', esFavorito);
+  favBtn.classList.toggle('border-sun', esFavorito);
+  favBtn.classList.toggle('bg-sun/10', esFavorito);
+  favBtn.classList.toggle('text-sun', esFavorito);
 }
 
 /* Elimina una ciudad específica de favoritos */
@@ -252,10 +252,10 @@ function renderizarFavoritos() {
         <span class="text-2xl">📍</span>
         <div class="min-w-0">
           <p class="font-semibold truncate">${fav.name}</p>
-          <p class="text-sm text-slate-400 truncate">${fav.admin1 ? fav.admin1 + ', ' : ''}${fav.country}</p>
+          <p class="text-sm text-sky-light/50 truncate">${fav.admin1 ? fav.admin1 + ', ' : ''}${fav.country}</p>
         </div>
       </div>
-      <button class="delete-btn p-2 rounded-lg hover:bg-rose-500/20 text-slate-500 hover:text-rose-400 transition-all" 
+      <button class="delete-btn p-2 rounded-lg hover:bg-sunset/20 text-sky-light/40 hover:text-sunset transition-all" 
               onclick="event.stopPropagation(); eliminarFavorito('${fav.name.replace(/'/g, "\\'")}')" 
               title="Eliminar">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -271,10 +271,6 @@ function renderizarFavoritos() {
 /* Busca el clima de una ciudad favorita al hacer clic */
 async function buscarFavorito(nombre) {
   cityInput.value = nombre;
-  // Scroll al hero para ver los resultados
-  document.getElementById('inicio').scrollIntoView({ behavior: 'smooth' });
-  // Pequeña espera para que termine el scroll
-  await new Promise(r => setTimeout(r, 400));
   realizarBusqueda(nombre);
 }
 
@@ -311,6 +307,11 @@ async function realizarBusqueda(nombre) {
     loader.classList.add('hidden');
     mostrarClimaActual(city, weather);
     mostrarPronostico(weather);
+
+    // Paso 4: Scroll automático a la sección de resultados
+    setTimeout(() => {
+      document.getElementById('clima-actual').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
 
   } catch (error) {
     // Manejo de errores de red u otros
