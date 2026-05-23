@@ -353,10 +353,10 @@ function inicializarObserverSecciones() {
       if (entry.isIntersecting) {
         const id = entry.target.id;
         const seccionMap = {
-          'inicio': 'quienes-somos',
-          'clima-actual': 'quienes-somos',
-          'pronostico': 'quienes-somos',
-          'favoritos': 'quienes-somos',
+          'inicio': 'inicio',
+          'clima-actual': 'inicio',
+          'pronostico': 'inicio',
+          'favoritos': 'inicio',
           'quienes-somos': 'quienes-somos',
           'acerca': 'acerca',
           'mision-vision': 'mision-vision',
