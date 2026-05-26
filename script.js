@@ -1,5 +1,5 @@
 /* =============================================
-   CLIMAAPP - JavaScript Principal
+   GEOCLIMA SOLUTIONS - JavaScript Principal
    API utilizada: Open-Meteo (gratuita, sin API key)
    ============================================= */
 
