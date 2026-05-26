@@ -47,10 +47,6 @@ App-Clima/
 
 Las ciudades favoritas se almacenan localmente en el navegador usando `localStorage`, por lo que se conservan entre sesiones en el mismo dispositivo.
 
-## 📷 Vista previa (opcional)
-
-Agrega aquí una imagen o GIF si deseas mostrar cómo se ve la app.
-
 ---
 
 **Autor:** @rmartin-2023205
