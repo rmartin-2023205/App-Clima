@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClimaApp — Clima en Tiempo Real</title>
-  <meta name="description" content="Consulta el clima en cualquier lugar del mundo con pronóstico extendido, alertas meteorológicas y ciudades favoritas.">
+  <meta name="description"
+    content="Consulta el clima en cualquier lugar del mundo con pronóstico extendido, alertas meteorológicas y ciudades favoritas.">
 
   <!-- TailwindCSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,15 +49,18 @@
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-night-dark text-white font-sans min-h-screen bg-pattern">
 
   <!-- ==================== NAVBAR FIJA ==================== -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full h-16 z-50 navbar-glass flex items-center transition-all duration-300">
+  <nav id="navbar"
+    class="fixed top-0 left-0 w-full h-16 z-50 navbar-glass flex items-center transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="flex items-center justify-between h-full">
         <!-- Logo -->
@@ -77,19 +82,22 @@
         </div>
 
         <!-- Botón hamburguesa móvil -->
-        <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-ocean/20 text-sky transition-colors" aria-label="Menú">
+        <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-ocean/20 text-sky transition-colors"
+          aria-label="Menú">
           <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
 
     <!-- Menú móvil desplegable -->
-    <div id="mobile-menu" class="lg:hidden hidden border-t border-ocean/20 absolute top-16 left-0 w-full bg-night-dark/95 backdrop-blur-md">
+    <div id="mobile-menu"
+      class="lg:hidden hidden border-t border-ocean/20 absolute top-16 left-0 w-full bg-night-dark/95 backdrop-blur-md">
       <div class="px-4 py-3 space-y-1">
         <a href="#inicio" class="mobile-nav-link active" data-section="inicio">Inicio</a>
         <a href="#quienes-somos" class="mobile-nav-link" data-section="quienes-somos">Quiénes Somos</a>
@@ -106,7 +114,8 @@
   <!-- ==================== MARQUEE / TICKER CENTRAL FIJO DEBAJO DEL NAVBAR ==================== -->
   <div class="fixed top-16 left-0 w-full h-8 z-40 marquee-bar flex items-center overflow-hidden">
     <div class="marquee-content whitespace-nowrap text-sun font-semibold text-xs tracking-wider uppercase">
-      🌤️ Carnet: 0907-23-12345 | Estudiante: Martín — Universidad Mariano Gálvez de Guatemala — "Id y satisfaced la sed de conocimiento" 🌤️
+      🌤️ Carnet: 0907-23-12345 | Estudiante: Martín — Universidad Mariano Gálvez de Guatemala — "Id y satisfaced la sed
+      de conocimiento" 🌤️
     </div>
   </div>
 
@@ -120,20 +129,25 @@
     <div class="particles absolute inset-0 pointer-events-none"></div>
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
-      
+
       <!-- Carrusel de imágenes automáticas (Rotación) - Requisito #3 -->
       <div class="w-full max-w-md h-48 sm:h-56 carousel-container mb-8 hover-lift">
-        <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=600&q=80" class="carousel-slide active" alt="Weather image 1">
-        <img src="https://images.unsplash.com/photo-1431440869543-efaf3388c585?auto=format&fit=crop&w=600&q=80" class="carousel-slide" alt="Weather image 2">
-        <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=600&q=80" class="carousel-slide" alt="Weather image 3">
-        <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=600&q=80" class="carousel-slide" alt="Weather image 4">
+        <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=600&q=80"
+          class="carousel-slide active" alt="Weather image 1">
+        <img src="https://images.unsplash.com/photo-1431440869543-efaf3388c585?auto=format&fit=crop&w=600&q=80"
+          class="carousel-slide" alt="Weather image 2">
+        <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=600&q=80"
+          class="carousel-slide" alt="Weather image 3">
+        <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=600&q=80"
+          class="carousel-slide" alt="Weather image 4">
         <div class="absolute bottom-2 right-4 bg-night-deep/75 px-3 py-1 rounded-full text-xs font-semibold text-sky">
           🌤️ Galería Climática
         </div>
       </div>
 
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight animate-fade-in">
-        Consulta el <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">clima</span> con precisión
+        Consulta el <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">clima</span> con
+        precisión
       </h1>
       <p class="text-lg sm:text-xl text-sky/80 mb-10 animate-fade-in-delay max-w-2xl">
         Datos precisos en tiempo real, pronóstico detallado para 7 días y almacenamiento de favoritos.
@@ -142,18 +156,16 @@
       <!-- Buscador de ciudades -->
       <form id="search-form" class="flex flex-col sm:flex-row gap-3 w-full max-w-xl mx-auto animate-fade-in-delay-2">
         <div class="relative flex-1">
-          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-sky/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-sky/60" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-          <input
-            id="city-input"
-            type="text"
-            placeholder="Escribe una ciudad..."
+          <input id="city-input" type="text" placeholder="Escribe una ciudad..."
             class="w-full pl-12 pr-4 py-4 rounded-2xl bg-night-dark/60 backdrop-blur-md border border-sky/30 text-white placeholder-sky/40 focus:outline-none focus:ring-2 focus:ring-sun/50 focus:border-sun/50 transition-all text-lg"
-            autocomplete="off"
-          >
+            autocomplete="off">
         </div>
-        <button type="submit" id="search-btn" class="px-8 py-4 bg-gradient-bright hover:opacity-90 rounded-2xl font-bold text-lg text-night transition-all duration-300 hover:shadow-lg hover:shadow-ocean/25 hover:-translate-y-0.5 active:translate-y-0">
+        <button type="submit" id="search-btn"
+          class="px-8 py-4 bg-gradient-bright hover:opacity-90 rounded-2xl font-bold text-lg text-night transition-all duration-300 hover:shadow-lg hover:shadow-ocean/25 hover:-translate-y-0.5 active:translate-y-0">
           Buscar
         </button>
       </form>
@@ -163,7 +175,7 @@
     <!-- Indicador de scroll -->
     <div class="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce z-10">
       <svg class="w-6 h-6 text-sky/40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
     </div>
   </section>
@@ -191,13 +203,16 @@
           <div class="text-center md:text-left">
             <div class="flex items-center gap-2 mb-1 justify-center md:justify-start">
               <svg class="w-5 h-5 text-sky" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd" />
               </svg>
               <h2 id="w-city" class="text-2xl font-bold text-white"></h2>
             </div>
             <p id="w-date" class="text-sky/60 text-sm mb-4"></p>
             <div class="flex items-end gap-2 justify-center md:justify-start">
-              <span id="w-temp" class="text-7xl md:text-8xl font-extrabold bg-gradient-to-b from-white to-sky bg-clip-text text-transparent temp-glow"></span>
+              <span id="w-temp"
+                class="text-7xl md:text-8xl font-extrabold bg-gradient-to-b from-white to-sky bg-clip-text text-transparent temp-glow"></span>
             </div>
             <p id="w-desc" class="text-lg text-sky/80 mt-2 capitalize font-medium"></p>
           </div>
@@ -206,7 +221,9 @@
           <div class="text-center">
             <span id="w-icon" class="text-8xl md:text-9xl block weather-icon-float"></span>
             <!-- Botón favorito -->
-            <button id="fav-btn" class="mt-4 px-5 py-2 rounded-full border border-sky/30 hover:border-sun hover:bg-sun/10 transition-all text-sm flex items-center gap-2 mx-auto" title="Guardar ciudad">
+            <button id="fav-btn"
+              class="mt-4 px-5 py-2 rounded-full border border-sky/30 hover:border-sun hover:bg-sun/10 transition-all text-sm flex items-center gap-2 mx-auto"
+              title="Guardar ciudad">
               <span id="fav-icon">☆</span> <span id="fav-text">Guardar</span>
             </button>
           </div>
@@ -272,16 +289,21 @@
 
   <!-- ==================== QUIÉNES SOMOS ==================== -->
   <section id="quienes-somos" class="py-24 px-4 scroll-mt-28 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-ocean/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-80 h-80 bg-sky/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-ocean/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+    </div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-sky/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+    </div>
 
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-ocean/10 border border-ocean/20 text-sky text-sm font-medium mb-4">Nuestro Equipo</span>
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-ocean/10 border border-ocean/20 text-sky text-sm font-medium mb-4">Nuestro
+          Equipo</span>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
           ¿Quiénes <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">Somos</span>?
         </h2>
-        <p class="text-sky/60 max-w-2xl mx-auto text-lg">Conoce la historia detrás de este proyecto universitario de ClimaApp</p>
+        <p class="text-sky/60 max-w-2xl mx-auto text-lg">Conoce la historia detrás de este proyecto universitario de
+          ClimaApp</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -293,7 +315,9 @@
               <div>
                 <h3 class="text-xl font-bold mb-2 text-white">Origen Académico</h3>
                 <p class="text-sky/70 leading-relaxed text-sm">
-                  Desarrollado como proyecto de ingeniería de software en la <strong class="text-sun">Universidad Mariano Gálvez de Guatemala</strong>. El sistema integra tecnologías avanzadas de frontend y consumo de APIs en tiempo real.
+                  Desarrollado como proyecto de ingeniería de software en la <strong class="text-sun">Universidad
+                    Mariano Gálvez de Guatemala</strong>. El sistema integra tecnologías avanzadas de frontend y consumo
+                  de APIs en tiempo real.
                 </p>
               </div>
             </div>
@@ -305,7 +329,8 @@
               <div>
                 <h3 class="text-xl font-bold mb-2 text-white">Objetivo Principal</h3>
                 <p class="text-sky/70 leading-relaxed text-sm">
-                  Ofrecer un visualizador meteorológico elegante y optimizado que procesa datos de sistemas meteorológicos globales y locales en una sola interfaz atractiva y 100% responsiva.
+                  Ofrecer un visualizador meteorológico elegante y optimizado que procesa datos de sistemas
+                  meteorológicos globales y locales en una sola interfaz atractiva y 100% responsiva.
                 </p>
               </div>
             </div>
@@ -317,19 +342,21 @@
               <div>
                 <h3 class="text-xl font-bold mb-2 text-white">Compromiso con el Usuario</h3>
                 <p class="text-sky/70 leading-relaxed text-sm">
-                  Sin anuncios, sin registros engorrosos. Solo datos climáticos precisos presentados en un ecosistema de diseño limpio, con enfoque absoluto en la accesibilidad.
+                  Sin anuncios, sin registros engorrosos. Solo datos climáticos precisos presentados en un ecosistema de
+                  diseño limpio, con enfoque absoluto en la accesibilidad.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Tarjeta visual -->
+        <!-- Tarjeta visual con FOTO DEL ALUMNO - Requisito #2a -->
         <div class="glass-card rounded-3xl p-10 text-center hover-lift flex flex-col items-center">
-          <div class="w-32 h-32 rounded-full bg-gradient-bright flex items-center justify-center mb-8 shadow-lg shadow-sun/20 text-night font-extrabold text-6xl">
-            🌤️
+          <div class="w-40 h-40 rounded-full overflow-hidden mb-8 shadow-lg shadow-sun/20 border-4 border-sun/40">
+            <img src="img/image.jpg" alt="Foto del estudiante" class="w-full h-full object-cover">
           </div>
-          <h3 class="text-2xl font-bold mb-3">ClimaApp UMG</h3>
+          <h3 class="text-2xl font-bold mb-1">Martín</h3>
+          <p class="text-sky/70 text-sm mb-1">Carnet: 0907-23-12345</p>
           <p class="text-sky font-medium mb-4">Ingeniería en Sistemas 2026</p>
           <div class="grid grid-cols-3 gap-4 pt-6 border-t border-ocean/20 w-full">
             <div>
@@ -354,7 +381,9 @@
   <section id="acerca" class="py-24 px-4 scroll-mt-28 relative overflow-hidden section-glow">
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">La Plataforma</span>
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">La
+          Plataforma</span>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
           Acerca de <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">ClimaApp</span>
         </h2>
@@ -363,27 +392,33 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="glass-card rounded-2xl p-8 hover-lift group">
-          <div class="w-14 h-14 rounded-xl bg-gradient-bright flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-night">
+          <div
+            class="w-14 h-14 rounded-xl bg-gradient-bright flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-night">
             <span class="text-3xl">🌐</span>
           </div>
           <h3 class="text-lg font-bold mb-3 text-white">Datos Mundiales</h3>
-          <p class="text-sky/50 text-sm leading-relaxed">Conexión directa con bases de datos globales que permiten la predicción del clima de cualquier latitud y longitud.</p>
+          <p class="text-sky/50 text-sm leading-relaxed">Conexión directa con bases de datos globales que permiten la
+            predicción del clima de cualquier latitud y longitud.</p>
         </div>
 
         <div class="glass-card rounded-2xl p-8 hover-lift group">
-          <div class="w-14 h-14 rounded-xl bg-gradient-bright flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-night">
+          <div
+            class="w-14 h-14 rounded-xl bg-gradient-bright flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-night">
             <span class="text-3xl">⚡</span>
           </div>
           <h3 class="text-lg font-bold mb-3 text-white">Actualizaciones Instantáneas</h3>
-          <p class="text-sky/50 text-sm leading-relaxed">Cálculos meteorológicos procesados al instante gracias al uso de la API abierta de Open-Meteo.</p>
+          <p class="text-sky/50 text-sm leading-relaxed">Cálculos meteorológicos procesados al instante gracias al uso
+            de la API abierta de Open-Meteo.</p>
         </div>
 
         <div class="glass-card rounded-2xl p-8 hover-lift group">
-          <div class="w-14 h-14 rounded-xl bg-gradient-bright flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-night">
+          <div
+            class="w-14 h-14 rounded-xl bg-gradient-bright flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-night">
             <span class="text-3xl">💾</span>
           </div>
           <h3 class="text-lg font-bold mb-3 text-white">LocalStorage Cache</h3>
-          <p class="text-sky/50 text-sm leading-relaxed">Tus ciudades preferidas se resguardan de manera segura en tu almacenamiento local, sin necesidad de base de datos remota.</p>
+          <p class="text-sky/50 text-sm leading-relaxed">Tus ciudades preferidas se resguardan de manera segura en tu
+            almacenamiento local, sin necesidad de base de datos remota.</p>
         </div>
       </div>
     </div>
@@ -391,11 +426,15 @@
 
   <!-- ==================== MISIÓN Y VISIÓN ==================== -->
   <section id="mision-vision" class="py-24 px-4 scroll-mt-28 relative overflow-hidden">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-ocean/5 to-sky/5 rounded-full blur-3xl"></div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-ocean/5 to-sky/5 rounded-full blur-3xl">
+    </div>
 
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Nuestro Rumbo</span>
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Nuestro
+          Rumbo</span>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
           Misión y <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">Visión</span>
         </h2>
@@ -404,28 +443,36 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Misión -->
         <div class="glass-card rounded-3xl p-10 hover-lift relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-ocean/10 to-transparent rounded-bl-full"></div>
+          <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-ocean/10 to-transparent rounded-bl-full">
+          </div>
           <div class="relative z-10">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-bright flex items-center justify-center mb-6 shadow-lg shadow-sun/20 group-hover:scale-110 transition-transform text-night">
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-bright flex items-center justify-center mb-6 shadow-lg shadow-sun/20 group-hover:scale-110 transition-transform text-night">
               <span class="text-3xl">🎯</span>
             </div>
             <h3 class="text-2xl font-bold mb-4 text-white">Nuestra Misión</h3>
             <p class="text-sky/60 leading-relaxed text-sm">
-              Brindar información climatológica de manera oportuna, libre y simplificada para favorecer la toma de decisiones diarias de nuestros usuarios en todo el territorio guatemalteco y latinoamericano. Buscamos erradicar las barreras de registro y pago en software de consulta general.
+              Brindar información climatológica de manera oportuna, libre y simplificada para favorecer la toma de
+              decisiones diarias de nuestros usuarios en todo el territorio guatemalteco y latinoamericano. Buscamos
+              erradicar las barreras de registro y pago en software de consulta general.
             </p>
           </div>
         </div>
 
         <!-- Visión -->
         <div class="glass-card rounded-3xl p-10 hover-lift relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-sky/10 to-transparent rounded-bl-full"></div>
+          <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-sky/10 to-transparent rounded-bl-full">
+          </div>
           <div class="relative z-10">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-bright flex items-center justify-center mb-6 shadow-lg shadow-sun/20 group-hover:scale-110 transition-transform text-night">
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-bright flex items-center justify-center mb-6 shadow-lg shadow-sun/20 group-hover:scale-110 transition-transform text-night">
               <span class="text-3xl">🔭</span>
             </div>
             <h3 class="text-2xl font-bold mb-4 text-white">Nuestra Visión</h3>
             <p class="text-sky/60 leading-relaxed text-sm">
-              Posicionarse como la herramienta de simulación y monitoreo ambiental académica referente de la UMG, extendiendo el ecosistema de consulta a widgets embebidos e implementando análisis inteligentes de comportamiento barométrico y de humedad histórica.
+              Posicionarse como la herramienta de simulación y monitoreo ambiental académica referente de la UMG,
+              extendiendo el ecosistema de consulta a widgets embebidos e implementando análisis inteligentes de
+              comportamiento barométrico y de humedad histórica.
             </p>
           </div>
         </div>
@@ -433,11 +480,12 @@
     </div>
   </section>
 
-  <!-- ==================== PRODUCTOS ==================== -->
+  <!-- ==================== PRODUCTOS (con foto, nombre y precio) ==================== -->
   <section id="productos" class="py-24 px-4 scroll-mt-28 relative overflow-hidden section-glow">
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Portafolio</span>
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Portafolio</span>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
           Nuestros <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">Productos</span>
         </h2>
@@ -445,89 +493,160 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- App Móvil -->
-        <div class="product-card glass-card rounded-2xl p-8 hover-lift group relative overflow-hidden">
-          <div class="w-14 h-14 rounded-xl bg-ocean/10 border border-ocean/20 flex items-center justify-center mb-5 text-sky">
-            <span class="text-3xl">📱</span>
+        <!-- Producto 1: Widget Mobile -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden hover-lift group relative">
+          <div class="w-full h-44 overflow-hidden">
+            <img src="img/producto_pwa.png" alt="Widget Mobile PWA"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           </div>
-          <h3 class="text-lg font-bold mb-2 text-white">Widget Mobile (PWA)</h3>
-          <p class="text-sky/50 text-sm leading-relaxed mb-4">Instala la aplicación en tu celular sin descargarla de tiendas. Ahorra espacio con tecnología progressive web app.</p>
-          <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">Listo para PWA</span>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">Widget Mobile (PWA)</h3>
+            <p class="text-sky/50 text-sm leading-relaxed mb-4">Instala la aplicación en tu celular sin descargarla de
+              tiendas. Ahorra espacio con tecnología progressive web app.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-extrabold text-sun">Q 150.00</span>
+              <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">PWA</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Alertas -->
-        <div class="product-card glass-card rounded-2xl p-8 hover-lift group relative overflow-hidden">
-          <div class="w-14 h-14 rounded-xl bg-ocean/10 border border-ocean/20 flex items-center justify-center mb-5 text-sky">
-            <span class="text-3xl">🚨</span>
+        <!-- Producto 2: Alertas -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden hover-lift group relative">
+          <div class="w-full h-44 overflow-hidden">
+            <img src="img/producto_alertas.png" alt="Alertas UMG-Safe"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           </div>
-          <h3 class="text-lg font-bold mb-2 text-white">Alertas UMG-Safe</h3>
-          <p class="text-sky/50 text-sm leading-relaxed mb-4">Envío automático de notificaciones a tu correo institucional ante eventos climatológicos extremos en campus.</p>
-          <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">Académico</span>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">Alertas UMG-Safe</h3>
+            <p class="text-sky/50 text-sm leading-relaxed mb-4">Envío automático de notificaciones a tu correo
+              institucional ante eventos climatológicos extremos en campus.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-extrabold text-sun">Q 250.00</span>
+              <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">Académico</span>
+            </div>
+          </div>
         </div>
 
-        <!-- API -->
-        <div class="product-card glass-card rounded-2xl p-8 hover-lift group relative overflow-hidden">
-          <div class="w-14 h-14 rounded-xl bg-ocean/10 border border-ocean/20 flex items-center justify-center mb-5 text-sky">
-            <span class="text-3xl">⚙️</span>
+        <!-- Producto 3: API REST -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden hover-lift group relative">
+          <div class="w-full h-44 overflow-hidden">
+            <img src="img/producto_api.png" alt="API ClimaApp REST"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           </div>
-          <h3 class="text-lg font-bold mb-2 text-white">API ClimaApp REST</h3>
-          <p class="text-sky/50 text-sm leading-relaxed mb-4">Integra el pronóstico directo en tus proyectos escolares de programación web con un endpoint abierto.</p>
-          <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">Developer Pack</span>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">API ClimaApp REST</h3>
+            <p class="text-sky/50 text-sm leading-relaxed mb-4">Integra el pronóstico directo en tus proyectos escolares
+              de programación web con un endpoint abierto.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-extrabold text-sun">Q 500.00</span>
+              <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">Developer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4: Dashboard Analítico -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden hover-lift group relative">
+          <div class="w-full h-44 overflow-hidden">
+            <img src="img/producto_dashboard.png" alt="Dashboard Analítico"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">Dashboard Analítico</h3>
+            <p class="text-sky/50 text-sm leading-relaxed mb-4">Visualiza gráficos de tendencia de temperatura, humedad
+              y velocidad del viento con históricos de 30 días.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-extrabold text-sun">Q 350.00</span>
+              <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 5: Widget Embebible -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden hover-lift group relative">
+          <div class="w-full h-44 overflow-hidden">
+            <img src="img/producto_widget.png" alt="Widget Embebible"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">Widget Embebible</h3>
+            <p class="text-sky/50 text-sm leading-relaxed mb-4">Inserta un mini pronóstico en cualquier sitio web con un
+              simple código HTML. Personalizable en colores y unidades.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-extrabold text-sun">Q 200.00</span>
+              <span class="px-3 py-1 rounded-full bg-ocean/20 text-sky text-xs font-semibold">Embed</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROVEEDORES ==================== -->
+  <!-- ==================== PROVEEDORES (con foto y nombre) ==================== -->
   <section id="proveedores" class="py-24 px-4 scroll-mt-28 relative overflow-hidden">
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Datos del Sistema</span>
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Datos
+          del Sistema</span>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
           Nuestros <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">Proveedores</span>
         </h2>
-        <p class="text-sky/60 max-w-2xl mx-auto text-lg">Información respaldada por entidades meteorológicas de alto rango</p>
+        <p class="text-sky/60 max-w-2xl mx-auto text-lg">Información respaldada por entidades meteorológicas de alto
+          rango</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <!-- Open-Meteo -->
-        <div class="glass-card rounded-2xl p-8 hover-lift text-center">
-          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-bright flex items-center justify-center mb-5 text-night">
-            <span class="text-3xl">🌐</span>
+        <div class="glass-card rounded-2xl overflow-hidden hover-lift text-center">
+          <div class="w-full h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80"
+              alt="Open-Meteo" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
           </div>
-          <h3 class="text-lg font-bold mb-2 text-white">Open-Meteo</h3>
-          <p class="text-sky text-xs font-semibold mb-3">API Meteorológica</p>
-          <p class="text-sky/50 text-sm leading-relaxed">Servicio abierto con alta tasa de respuesta y resolución por satélite sin restricciones de volumen.</p>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">Open-Meteo</h3>
+            <p class="text-sky text-xs font-semibold mb-3">API Meteorológica</p>
+            <p class="text-sky/50 text-sm leading-relaxed">Servicio abierto con alta tasa de respuesta y resolución por
+              satélite sin restricciones de volumen.</p>
+          </div>
         </div>
 
         <!-- INSIVUMEH -->
-        <div class="glass-card rounded-2xl p-8 hover-lift text-center">
-          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-bright flex items-center justify-center mb-5 text-night">
-            <span class="text-3xl">🇬🇹</span>
+        <div class="glass-card rounded-2xl overflow-hidden hover-lift text-center">
+          <div class="w-full h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&w=600&q=80"
+              alt="INSIVUMEH" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
           </div>
-          <h3 class="text-lg font-bold mb-2 text-white">INSIVUMEH</h3>
-          <p class="text-sky text-xs font-semibold mb-3">Monitoreo Local</p>
-          <p class="text-sky/50 text-sm leading-relaxed">Instituto nacional de Guatemala que sirve de guía para contrastar los históricos barométricos nacionales.</p>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">INSIVUMEH</h3>
+            <p class="text-sky text-xs font-semibold mb-3">Monitoreo Local</p>
+            <p class="text-sky/50 text-sm leading-relaxed">Instituto nacional de Guatemala que sirve de guía para
+              contrastar los históricos barométricos nacionales.</p>
+          </div>
         </div>
 
         <!-- NOAA Satellites -->
-        <div class="glass-card rounded-2xl p-8 hover-lift text-center">
-          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-bright flex items-center justify-center mb-5 text-night">
-            <span class="text-3xl">🛰️</span>
+        <div class="glass-card rounded-2xl overflow-hidden hover-lift text-center">
+          <div class="w-full h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80"
+              alt="NOAA Space" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
           </div>
-          <h3 class="text-lg font-bold mb-2 text-white">NOAA Space</h3>
-          <p class="text-sky text-xs font-semibold mb-3">Monitoreo Numérico</p>
-          <p class="text-sky/50 text-sm leading-relaxed">Modelos climatológicos por satélite que respaldan las lecturas de velocidad de viento y humedad relativa.</p>
+          <div class="p-6">
+            <h3 class="text-lg font-bold mb-2 text-white">NOAA Space</h3>
+            <p class="text-sky text-xs font-semibold mb-3">Monitoreo Numérico</p>
+            <p class="text-sky/50 text-sm leading-relaxed">Modelos climatológicos por satélite que respaldan las
+              lecturas de velocidad de viento y humedad relativa.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== CLIENTES ==================== -->
+  <!-- ==================== CLIENTES (nombre, icono, foto) ==================== -->
   <section id="clientes" class="py-24 px-4 scroll-mt-28 relative overflow-hidden section-glow">
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Opiniones</span>
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Opiniones</span>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
           Nuestros <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">Clientes</span>
         </h2>
@@ -535,28 +654,61 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Cliente 1 -->
         <div class="glass-card rounded-2xl p-6 hover-lift">
-          <p class="text-sky/60 text-sm leading-relaxed italic mb-4">
-            "Excelente interfaz. El carrusel de imágenes y la marquesina me facilitaron el control visual rápido. El diseño responsivo funciona de maravilla en mi celular."
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-sun/40 shrink-0">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                alt="Carlos Orellana" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-sun flex items-center gap-1">Carlos Orellana <span
+                  class="text-lg">🎓</span></h4>
+              <span class="text-[10px] text-sky/40 uppercase">Estudiante UMG</span>
+            </div>
+          </div>
+          <p class="text-sky/60 text-sm leading-relaxed italic">
+            "Excelente interfaz. El carrusel de imágenes y la marquesina me facilitaron el control visual rápido. El
+            diseño responsivo funciona de maravilla en mi celular."
           </p>
-          <h4 class="font-bold text-sm text-sun">Carlos Orellana</h4>
-          <span class="text-[10px] text-sky/40 uppercase">Estudiante UMG</span>
         </div>
 
+        <!-- Cliente 2 -->
         <div class="glass-card rounded-2xl p-6 hover-lift">
-          <p class="text-sky/60 text-sm leading-relaxed italic mb-4">
-            "Implementamos la API de ClimaApp en nuestra investigación ecológica de fin de cursos. Los datos de Open-Meteo son sumamente fiables y estructurados."
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-sun/40 shrink-0">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                alt="Amanda Estrada" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-sun flex items-center gap-1">Amanda Estrada <span
+                  class="text-lg">🔬</span></h4>
+              <span class="text-[10px] text-sky/40 uppercase">Investigadora Académica</span>
+            </div>
+          </div>
+          <p class="text-sky/60 text-sm leading-relaxed italic">
+            "Implementamos la API de ClimaApp en nuestra investigación ecológica de fin de cursos. Los datos de
+            Open-Meteo son sumamente fiables y estructurados."
           </p>
-          <h4 class="font-bold text-sm text-sun">Amanda Estrada</h4>
-          <span class="text-[10px] text-sky/40 uppercase">Investigadora Académica</span>
         </div>
 
+        <!-- Cliente 3 -->
         <div class="glass-card rounded-2xl p-6 hover-lift">
-          <p class="text-sky/60 text-sm leading-relaxed italic mb-4">
-            "La sección de favoritos con almacenamiento local es sumamente práctica. Puedo guardar las ciudades de mis sedes de estudio favoritas y consultar su clima al instante."
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-sun/40 shrink-0">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                alt="Rodolfo Gómez" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-sun flex items-center gap-1">Rodolfo Gómez <span
+                  class="text-lg">⭐</span></h4>
+              <span class="text-[10px] text-sky/40 uppercase">Usuario Frecuente</span>
+            </div>
+          </div>
+          <p class="text-sky/60 text-sm leading-relaxed italic">
+            "La sección de favoritos con almacenamiento local es sumamente práctica. Puedo guardar las ciudades de mis
+            sedes de estudio favoritas y consultar su clima al instante."
           </p>
-          <h4 class="font-bold text-sm text-sun">Rodolfo Gómez</h4>
-          <span class="text-[10px] text-sky/40 uppercase">Usuario Frecuente</span>
         </div>
       </div>
     </div>
@@ -566,7 +718,9 @@
   <section id="contacto" class="py-24 px-4 scroll-mt-28 relative overflow-hidden">
     <div class="max-w-5xl mx-auto relative z-10">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Canal Directo</span>
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-ocean/20 border border-ocean/30 text-sky text-sm font-medium mb-4">Canal
+          Directo</span>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
           <span class="bg-gradient-to-r from-sky to-sun bg-clip-text text-transparent">Contáctenos</span>
         </h2>
@@ -588,6 +742,16 @@
             </p>
           </div>
 
+          <!-- Tarjeta Teléfono -->
+          <div class="glass-card rounded-2xl p-6 hover-lift flex-1 flex flex-col justify-center">
+            <h4 class="font-bold text-base mb-2 text-sun flex items-center gap-2">
+              <span>📞</span> Teléfono
+            </h4>
+            <p class="text-sky/60 text-sm font-semibold">
+              +502 2411-1800
+            </p>
+          </div>
+
           <!-- Tarjeta Correo del Proyecto -->
           <div class="glass-card rounded-2xl p-6 hover-lift flex-1 flex flex-col justify-center">
             <h4 class="font-bold text-base mb-2 text-sun flex items-center gap-2">
@@ -597,10 +761,27 @@
               estudiante0907@miumg.edu.gt
             </p>
           </div>
+
+          <!-- Redes Sociales del Contacto -->
+          <div class="glass-card rounded-2xl p-6 hover-lift flex-1 flex flex-col justify-center">
+            <h4 class="font-bold text-base mb-3 text-sun flex items-center gap-2">
+              <span>🌐</span> Redes Sociales
+            </h4>
+            <div class="flex gap-3">
+              <a href="#"
+                class="w-9 h-9 rounded-full border border-ocean/30 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">FB</a>
+              <a href="#"
+                class="w-9 h-9 rounded-full border border-ocean/30 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">X</a>
+              <a href="#"
+                class="w-9 h-9 rounded-full border border-ocean/30 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">IG</a>
+              <a href="#"
+                class="w-9 h-9 rounded-full border border-ocean/30 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">YT</a>
+            </div>
+          </div>
         </div>
 
-        <!-- Formulario -->
-        <div class="lg:col-span-3">
+        <!-- Formulario + Mapa -->
+        <div class="lg:col-span-3 flex flex-col gap-6">
           <form id="contact-form" class="glass-card rounded-3xl p-8 space-y-4" novalidate>
             <div>
               <label for="contact-name" class="block text-xs font-semibold text-sky uppercase mb-1">Nombre</label>
@@ -620,7 +801,8 @@
                 class="w-full px-4 py-3 rounded-xl bg-night-dark/50 border border-sky/20 text-white placeholder-sky/30 focus:outline-none focus:ring-2 focus:ring-sun/50 focus:border-sun/30 transition-all text-sm resize-none"></textarea>
             </div>
 
-            <button type="submit" class="w-full py-3 bg-gradient-bright hover:opacity-90 rounded-xl font-bold text-sm text-night transition-all duration-300 hover:shadow-lg">
+            <button type="submit"
+              class="w-full py-3 bg-gradient-bright hover:opacity-90 rounded-xl font-bold text-sm text-night transition-all duration-300 hover:shadow-lg">
               Enviar a Soporte Académico
             </button>
 
@@ -628,6 +810,8 @@
               <p class="text-sky font-bold text-sm">✅ Mensaje enviado exitosamente.</p>
             </div>
           </form>
+
+
         </div>
       </div>
     </div>
@@ -636,7 +820,7 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="border-t border-ocean/20 pt-12 pb-8 px-4 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-t from-night-dark via-night-dark/80 to-transparent"></div>
-    
+
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-ocean/10 pb-8 mb-6">
         <div>
@@ -648,13 +832,17 @@
             Visualizador climatológico modular e interactivo desarrollado en la Universidad Mariano Gálvez.
           </p>
         </div>
-        
+
         <!-- Redes Sociales - Requisito #4 -->
         <div class="flex gap-4">
-          <a href="#" class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">FB</a>
-          <a href="#" class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">X</a>
-          <a href="#" class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">IG</a>
-          <a href="#" class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">GH</a>
+          <a href="#"
+            class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">FB</a>
+          <a href="#"
+            class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">X</a>
+          <a href="#"
+            class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">IG</a>
+          <a href="#"
+            class="w-8 h-8 rounded-full border border-ocean/20 flex items-center justify-center text-sky hover:text-sun hover:bg-ocean/20 transition-all text-sm">GH</a>
         </div>
       </div>
 
@@ -674,6 +862,19 @@
     </div>
   </footer>
 
+  <!-- ==================== MÚSICA INSTRUMENTAL DE FONDO (Requisito #3) ==================== -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="music/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Botón flotante para controlar la música -->
+  <button id="music-toggle"
+    class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-night-dark/80 backdrop-blur-md border border-ocean/30 flex items-center justify-center text-sky hover:text-sun hover:border-sun/50 transition-all shadow-lg shadow-night-deep/50 group"
+    title="Activar/Desactivar música">
+    <span id="music-icon" class="text-xl group-hover:scale-110 transition-transform">🔇</span>
+  </button>
+
   <script src="script.js"></script>
 </body>
+
 </html>

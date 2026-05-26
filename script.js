@@ -343,6 +343,33 @@ function inicializarCarrusel() {
   setInterval(rotarCarrusel, 4000); // Rota cada 4 segundos
 }
 
+// ============ MÚSICA INSTRUMENTAL DE FONDO ============
+function inicializarMusica() {
+  const bgMusic = document.getElementById('bg-music');
+  const musicToggle = document.getElementById('music-toggle');
+  const musicIcon = document.getElementById('music-icon');
+
+  if (!bgMusic || !musicToggle) return;
+
+  bgMusic.volume = 0.15; // Volumen bajo como indica el requisito
+  let isPlaying = false;
+
+  musicToggle.addEventListener('click', () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      musicIcon.textContent = '🔇';
+      isPlaying = false;
+    } else {
+      bgMusic.play().then(() => {
+        musicIcon.textContent = '🎵';
+        isPlaying = true;
+      }).catch(err => {
+        console.log('No se pudo reproducir la música:', err);
+      });
+    }
+  });
+}
+
 // ============ INDICADOR DE SECCIÓN ACTIVA ============
 function inicializarObserverSecciones() {
   const secciones = document.querySelectorAll('section[id]');
@@ -408,6 +435,7 @@ function inicializar() {
   renderizarFavoritos();
   inicializarObserverSecciones();
   inicializarCarrusel();
+  inicializarMusica();
 }
 
 document.addEventListener('DOMContentLoaded', inicializar);
